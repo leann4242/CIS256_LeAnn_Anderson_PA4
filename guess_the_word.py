@@ -36,12 +36,12 @@ def main():
     letters_guessed = []
 
     # Number of guesses allowed
-    guesses_left = 10
+    guesses_left = 6
 
     print("\n***** Guessing Game *****")
+    print("\nWord: ", show_word(word, letters_guessed))
 
     while guesses_left > 0:
-        print("\nWord: ", show_word(word, letters_guessed))
         print("Letters Guessed: ", letters_guessed)
         print("Guesses left: ", guesses_left)
 
@@ -60,10 +60,10 @@ def main():
         letters_guessed.append(guess)
 
         if check_guess(word, guess):
-            print("\nCorrect!")
+            print("\nCorrect letter!")
         else:
             guesses_left -= 1
-            print("\nWrong!")
+            print("\nWrong letter!")
 
         print("Word: ", show_word(word, letters_guessed))
 
@@ -72,7 +72,7 @@ def main():
             break
 
     else:
-        print("\nThe End!  The word was: ", word,"\n")
+        print("\nBetter luck next time!  The word was: ", word,"\n")
 
 # Run the program
 if __name__ == "__main__":
