@@ -5,7 +5,7 @@
 import random
 
 # List of words
-words = ["basketball", "volleyball", "birthday", "weekend", "Halloween", "Disneyland"]
+words = ["BASKETBALL", "VOLLEYBALL", "BIRTHDAY", "WEEKEND", "HALLOWEEN", "DISNEYLAND"]
 
 # Select random word
 def select_word():
@@ -46,7 +46,7 @@ def main():
         print("Guesses left: ", guesses_left)
 
         # Guess input
-        guess = input("\nGuess one letter: ").strip()
+        guess = input("\nGuess one letter: ").strip().upper()
 
         # Check guess
         if len(guess) != 1 or not guess.isalpha():
@@ -68,11 +68,11 @@ def main():
         print("Word: ", show_word(word, letters_guessed))
 
         if "-" not in show_word(word, letters_guessed):
-            print("\n\nCongrats, you guessed the word: ", word)
+            print("\nCongrats, you guessed the word: ", word,"\n")
             break
 
     else:
-        print("\n\nThe End!  The word was: ", word)
+        print("\nThe End!  The word was: ", word,"\n")
 
 # Run the program
 if __name__ == "__main__":
